@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components/macro";
+import "./App.css";
+import Hero from "./Hero";
+import SmartMenu from "./Menu";
+import NewsItems from "./NewsItems";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <SmartMenu />
+      <Hero />
+      <NewsItems />
+    </Container>
   );
 }
 
 export default App;
+const Container = styled.main`
+  max-width: 1138px;
+  padding-bottom: 5rem;
+  align-self: center;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`;
